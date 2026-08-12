@@ -15,10 +15,9 @@ import { RESUME_URL } from "@/lib/constants";
 
 export default function HeroSection() {
   const roles = [
-    "Frontend Architect",
-    "UI/UX Engineer",
-    "Next.js Specialist",
-    "Creative Developer",
+    "Web Development",
+    "3D Modeler",
+    "Android Development",
   ];
 
   return (
