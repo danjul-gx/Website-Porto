@@ -60,7 +60,12 @@ export const metadata: Metadata = {
     title: "Zuldan Fahrizal Rahman",
     description:
       "Personal portfolio of Zuldan, an Informatics student and frontend developer passionate about building clean, interactive, and user-friendly web applications.",
-    images: ["/og/og-default.png"],
+    images: ["/profile.png"],
+  },
+  icons: {
+    icon: "/profile.png",
+    shortcut: "/profile.png",
+    apple: "/profile.png",
   },
   robots: {
     index: true,
