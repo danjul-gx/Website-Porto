@@ -63,9 +63,9 @@ export const metadata: Metadata = {
     images: ["/profile.png"],
   },
   icons: {
-    icon: "/profile.png",
-    shortcut: "/profile.png",
-    apple: "/profile.png",
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
   },
   robots: {
     index: true,
