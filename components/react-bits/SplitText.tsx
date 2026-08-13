@@ -15,7 +15,7 @@ interface SplitTextProps {
 /**
  * React Bits - SplitText Component Wrapper
  * Splits a text string into individual animated characters with smooth GPU-accelerated motion.
- * Configured for maximum mobile compatibility and WebKit background-clip gradient support.
+ * Configured for maximum mobile compatibility and WebKit iOS background-clip gradient support.
  */
 export default function SplitText({
   text,
@@ -39,7 +39,7 @@ export default function SplitText({
   };
 
   const childVariants = {
-    hidden: { opacity: 0, y: 15, filter: "blur(2px)" },
+    hidden: { opacity: 0.01, y: 12, filter: "blur(2px)" },
     visible: {
       opacity: 1,
       y: 0,
@@ -56,18 +56,19 @@ export default function SplitText({
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className={cn("inline-flex flex-wrap gap-x-[0.25em] max-w-full align-baseline", className)}
+      style={{ opacity: 1 }}
+      className="inline-flex flex-wrap gap-x-[0.25em] max-w-full align-baseline"
     >
       {words.map((word, wordIndex) => (
         <span
           key={wordIndex}
-          className={cn("inline-block whitespace-nowrap max-w-full", className, wordClassName)}
+          className={cn("inline-block whitespace-nowrap max-w-full", wordClassName)}
         >
           {word.split("").map((char, charIndex) => (
             <motion.span
               key={charIndex}
               variants={childVariants}
-              className={cn("inline-block", charClassName)}
+              className={cn("inline-block", className, charClassName)}
             >
               {char}
             </motion.span>
@@ -77,4 +78,5 @@ export default function SplitText({
     </motion.span>
   );
 }
+
 
