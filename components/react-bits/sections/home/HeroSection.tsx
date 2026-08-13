@@ -50,10 +50,10 @@ export default function HeroSection() {
           {/* Name & Headline with React Bits SplitText */}
           <motion.h1
             variants={fadeInUp}
-            className="text-4xl sm:text-6xl xl:text-7xl font-extrabold tracking-tight leading-[1.08] mb-4 font-display"
+            className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight leading-[1.08] mb-4 font-display w-full max-w-full"
             style={{ fontFamily: "var(--font-plus-jakarta)" }}
           >
-            <span className="text-zinc-400 block text-2xl sm:text-3xl font-medium mb-1">
+            <span className="text-zinc-400 block text-xl sm:text-2xl lg:text-3xl font-medium mb-1">
               Hello, I&apos;m
             </span>
             <SplitText
@@ -65,8 +65,8 @@ export default function HeroSection() {
           </motion.h1>
 
           {/* Rotating Role Title */}
-          <motion.div variants={fadeInUp} className="text-lg sm:text-2xl lg:text-3xl font-semibold text-zinc-300 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1">
-            <span>Specializing as a</span>
+          <motion.div variants={fadeInUp} className="text-base sm:text-xl lg:text-2xl xl:text-3xl font-semibold text-zinc-300 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1 w-full max-w-full">
+            <span className="shrink-0">Specializing as a</span>
             <RotatingText
               texts={roles}
               interval={2800}

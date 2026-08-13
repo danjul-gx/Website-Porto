@@ -13,6 +13,7 @@ interface RotatingTextProps {
 /**
  * React Bits - RotatingText Component Wrapper
  * Cycles through a list of titles/roles with smooth height-aware crossfade animations.
+ * Ensures text gradient and overflow compatibility across mobile WebKit browsers.
  */
 export default function RotatingText({
   texts,
@@ -30,15 +31,15 @@ export default function RotatingText({
   }, [texts, interval]);
 
   return (
-    <span className={cn("inline-block relative overflow-hidden align-bottom py-1", className)}>
+    <span className="inline-flex relative max-w-full align-bottom py-0.5 min-h-[1.2em]">
       <AnimatePresence mode="wait">
         <motion.span
           key={texts[index]}
-          initial={{ y: "100%", opacity: 0, filter: "blur(4px)" }}
+          initial={{ y: "80%", opacity: 0, filter: "blur(3px)" }}
           animate={{ y: "0%", opacity: 1, filter: "blur(0px)" }}
-          exit={{ y: "-100%", opacity: 0, filter: "blur(4px)" }}
-          transition={{ duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="inline-block"
+          exit={{ y: "-80%", opacity: 0, filter: "blur(3px)" }}
+          transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className={cn("inline-block whitespace-nowrap max-w-full", className)}
         >
           {texts[index]}
         </motion.span>
@@ -46,3 +47,4 @@ export default function RotatingText({
     </span>
   );
 }
+
