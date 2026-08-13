@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink } from "lucide-react";
@@ -25,19 +25,36 @@ export default function CertificatesGrid() {
     setSelectedCertTitle(cert.title);
   };
 
-  const handleCloseModal = () => {
+  const handleCloseModal = useCallback(() => {
     setSelectedImage(null);
     setSelectedCertTitle("");
-  };
+  }, []);
+
+  // Menutup modal dengan tombol Escape
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        handleCloseModal();
+      }
+    };
+
+    if (selectedImage) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedImage, handleCloseModal]);
 
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {certificates.map((cert) => {
+        {certificates.map((cert, index) => {
           const dateFormatted = formatDate(cert.issueDate);
           return (
             <div
-              key={cert.id}
+              key={`${cert.id}-${index}`}
               className="bg-zinc-900/60 border border-zinc-800/80 rounded-2xl p-4 flex flex-col justify-between hover:border-zinc-700 transition-all duration-300 shadow-lg group"
             >
               {/* Image Container with GlareHover */}
@@ -118,7 +135,7 @@ export default function CertificatesGrid() {
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative max-w-4xl max-h-[85vh] w-full rounded-2xl overflow-hidden bg-zinc-950 border border-zinc-800 shadow-2xl p-2 sm:p-4 flex flex-col items-center"
+              className="relative max-w-4xl max-h-[85vh] w-full rounded-2xl overflow-hidden bg-zinc-950 border border-zinc-800 shadow-2xl p-2 sm:p-4 flex flex-col items-center cursor-default"
             >
               <div className="relative w-full h-[60vh] max-h-[700px]">
                 <Image

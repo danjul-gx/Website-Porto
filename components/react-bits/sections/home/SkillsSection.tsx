@@ -25,25 +25,25 @@ const skillGroups = [
 
 export default function SkillsSection() {
   return (
-    <Section className="py-24">
+    <Section className="py-16 sm:py-24">
       <FadeIn>
         <h2
-          className="text-4xl sm:text-5xl font-bold text-white mb-16"
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-8 sm:mb-16"
           style={{ fontFamily: "var(--font-plus-jakarta)" }}
         >
           Technical Skills
         </h2>
       </FadeIn>
 
-      <div className="space-y-20">
+      <div className="space-y-10 sm:space-y-20">
         {skillGroups.map((group) => (
           <FadeIn key={group.title}>
             <div>
-              <h3 className="text-3xl font-bold text-white mb-5">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-5">
                 {group.title}
               </h3>
 
-              <p className="text-zinc-400 text-lg max-w-3xl leading-relaxed mb-8">
+              <p className="text-zinc-400 text-base sm:text-lg max-w-3xl leading-relaxed mb-6 sm:mb-8">
                 {group.description}
               </p>
 

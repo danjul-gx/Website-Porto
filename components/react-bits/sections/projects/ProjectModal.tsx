@@ -50,25 +50,27 @@ export default function ProjectModal({
 
   return (
     <div
-      className="fixed inset-0 z-[9999] bg-black/80 backdrop-blur-md flex items-center justify-center p-4"
+      className="fixed inset-0 z-[9999] bg-black/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-4"
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-7xl rounded-3xl overflow-hidden border border-white/10 bg-[#050505]"
+        className="relative w-full max-w-7xl rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 bg-[#050505] max-h-[95dvh] flex flex-col"
         onClick={(e) =>
           e.stopPropagation()
         }
       >
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 z-50 p-2 rounded-full bg-black/60 hover:bg-black text-white"
+          className="absolute top-3 right-3 sm:top-5 sm:right-5 z-50 p-2 rounded-full bg-black/60 hover:bg-black text-white"
+          aria-label="Close project details"
         >
-          <X size={22} />
+          <X size={20} />
         </button>
 
-        <div className="grid lg:grid-cols-2">
+        {/* Two-column on lg+, stacked on mobile */}
+        <div className="grid lg:grid-cols-2 overflow-y-auto lg:overflow-hidden flex-1 min-h-0">
           {/* Slider */}
-          <div className="aspect-[27/15] w-full overflow-hidden bg-black/20">
+          <div className="aspect-video w-full overflow-hidden bg-black/20 shrink-0 lg:aspect-auto lg:h-full">
             <MorphSlider
               items={sliderItems}
               transition="melt"
@@ -81,12 +83,12 @@ export default function ProjectModal({
           </div>
 
           {/* Content */}
-          <div className="p-8 overflow-y-auto max-h-[700px]">
-            <h2 className="text-4xl font-bold text-white mb-4">
+          <div className="p-5 sm:p-8 overflow-y-auto lg:max-h-[700px]">
+            <h2 className="text-2xl sm:text-4xl font-bold text-white mb-4">
               {project.title}
             </h2>
 
-            <p className="text-zinc-400 mb-8 leading-relaxed">
+            <p className="text-zinc-400 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
               {project.description}
             </p>
 
@@ -94,7 +96,7 @@ export default function ProjectModal({
               Technologies
             </h3>
 
-            <div className="flex flex-wrap gap-2 mb-8">
+            <div className="flex flex-wrap gap-2 mb-6 sm:mb-8">
               {project.technologies.map(
                 (tech) => (
                   <span
@@ -111,7 +113,7 @@ export default function ProjectModal({
               Tags
             </h3>
 
-            <div className="flex flex-wrap gap-2 mb-8">
+            <div className="flex flex-wrap gap-2 mb-6 sm:mb-8">
               {project.tags.map((tag) => (
                 <span
                   key={tag}
@@ -134,9 +136,9 @@ export default function ProjectModal({
                   href={project.links.live}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white text-black font-medium hover:scale-105 transition"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white text-black font-medium hover:scale-105 transition text-sm"
                 >
-                  <Globe size={18} />
+                  <Globe size={16} />
                   Website
                 </a>
               )}
@@ -146,9 +148,9 @@ export default function ProjectModal({
                   href={project.links.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900 border border-white/10 text-white hover:bg-zinc-800 transition"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900 border border-white/10 text-white hover:bg-zinc-800 transition text-sm"
                 >
-                  <Github size={18} />
+                  <Github size={16} />
                   Github
                 </a>
               )}
@@ -158,9 +160,9 @@ export default function ProjectModal({
                   href={project.links.demo}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-red-500 text-white hover:bg-red-600 transition"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-red-500 text-white hover:bg-red-600 transition text-sm"
                 >
-                  <PlayCircle size={18} />
+                  <PlayCircle size={16} />
                   Demo
                 </a>
               )}
@@ -170,9 +172,9 @@ export default function ProjectModal({
                   href={project.links.game}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-green-600 text-white hover:bg-green-700 transition"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-green-600 text-white hover:bg-green-700 transition text-sm"
                 >
-                  <Gamepad2 size={18} />
+                  <Gamepad2 size={16} />
                   Play Game
                 </a>
               )}

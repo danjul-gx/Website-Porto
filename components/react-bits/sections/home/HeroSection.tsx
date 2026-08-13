@@ -22,13 +22,13 @@ export default function HeroSection() {
 
   return (
     <Section
-      className="min-h-[92dvh] flex items-center relative overflow-hidden pt-24 pb-16"
+      className="min-h-[92dvh] flex items-center relative overflow-hidden pt-20 sm:pt-24 pb-12 sm:pb-16"
       as="div"
     >
       {/* Isolated Animated Background */}
       <HeroBackground />
 
-      <div className="relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div className="relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
         {/* Left Column — Core Content & CTAs (col-span-7) */}
         <motion.div
           variants={staggerContainer}
@@ -65,7 +65,7 @@ export default function HeroSection() {
           </motion.h1>
 
           {/* Rotating Role Title */}
-          <motion.div variants={fadeInUp} className="text-xl sm:text-2xl lg:text-3xl font-semibold text-zinc-300 mb-6 flex items-center gap-2">
+          <motion.div variants={fadeInUp} className="text-lg sm:text-2xl lg:text-3xl font-semibold text-zinc-300 mb-6 flex flex-wrap items-center gap-x-2 gap-y-1">
             <span>Specializing as a</span>
             <RotatingText
               texts={roles}
@@ -171,18 +171,17 @@ export default function HeroSection() {
             delay: 0.2,
             ease: [0.25, 0.46, 0.45, 0.94],
           }}
-          className="lg:col-span-5 flex justify-center lg:justify-end"
+          className="lg:col-span-5 flex justify-center lg:justify-end order-first lg:order-none"
         >
           <TiltedCard
             maxTilt={8}
             scaleOnHover={1.02}
             glareEnable
-            className="w-full max-w-[460px]"
+            className="w-full max-w-[280px] sm:max-w-[380px] lg:max-w-[460px]"
           >
             <div
-              className="relative rounded-[32px] overflow-hidden"
+              className="relative rounded-[24px] sm:rounded-[32px] overflow-hidden h-[320px] sm:h-[420px] lg:h-[550px]"
               style={{
-                height: "550px",
                 border: "2px solid rgba(139,92,246,0.45)",
                 boxShadow: "0 0 40px rgba(139,92,246,0.2)",
               }}
