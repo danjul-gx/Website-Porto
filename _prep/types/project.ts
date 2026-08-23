@@ -37,7 +37,7 @@ export interface Project {
   featured: boolean;
   thumbnail: string;
   images: string[];
-  tags: string[];
+  language: string[];
   technologies: Technology[];
   links: ProjectLink;
   events: ProjectEvent[];

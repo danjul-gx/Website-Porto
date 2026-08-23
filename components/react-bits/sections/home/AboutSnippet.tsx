@@ -37,7 +37,7 @@ export default function AboutSnippet() {
         <FadeIn>
           <div className="grid grid-cols-2 gap-4">
             {[
-              { label: "Total Projects", value: "4" },
+              { label: "Total Projects", value: "7" },
               { label: "Certificates", value: "4" },
             ].map((stat) => (
               <div

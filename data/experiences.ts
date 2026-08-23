@@ -56,7 +56,7 @@ export const experiences: Experience[] = [
       "Orchestrated the end-to-end documentation lifecycle for the event, maintaining a highly organized archive of participant manifests, licensing requests, and official certificates of appreciation.",
       "Acted as the primary administrative bridge between internal student committees, university administration, and external company representatives to ensure a seamlessly organized and compliant visit."
     ],
-    technologies: ["Event Administration", "Formal Communication", "Record Keeping", "Google Workspace"],
+    technologies: ["Event Administration", "Proposal Writing", "Formal Communication", "Record Keeping", "Google Workspace"],
     attachments: [
       "/images/experiences/comvis/comvis.png",
       "/images/experiences/comvis/comvis1.png"
@@ -92,6 +92,38 @@ export const experiences: Experience[] = [
       "/images/experiences/guest_lecture/gl.png",
       "/images/experiences/guest_lecture/gl1.png",
       "/images/experiences/guest_lecture/gl2.png",
+    ],
+    order: 3,
+  },
+  {
+    id: "OilCycle",
+    role: "OilCycle",
+    company: "Social Project",
+    organization: "President University",
+    companyUrl: "https://www.instagram.com/oilcycle_?igsi=MXRnN2tsdTB3ank5ZQ==",
+    location: "Kelurahan Harapan Jaya, Kecamatan Bekasi Utara, Kota Bekasi, Jawa Barat",
+    type: "organization",
+    startDate: "2025",
+    endDate: "2025",
+    description:
+      "OilCycle is a community-based social project aimed at educating local residents on used cooking oil management and recycling. As the project secretary, I handled formal documentation, campus approval, and local community outreach to ensure smooth project execution.",
+    highlights: [
+      "Directed end-to-end event planning, team budget allocations, sponsor outreach, and logistics execution.",
+      "Coordinated a team of 25+ committee members across event design, media production, and guest speaker hosting.",
+      "Achieved over 200+ attendees with 95%+ positive feedback rating from participating alumni.",
+      "Managed digital ticketing registration system and live interactive Q&A sessions."
+    ],
+    responsibilities: [
+      "Drafted and finalized project proposals to secure official approval and support from the faculty.",
+      "Created and delivered formal permission letters and partnership proposals to local community leaders (Ibu RW).",
+      "Recorded meeting minutes, tracked project timelines, and managed all administrative documents for the team.",
+      "Coordinated directly with faculty staff and neighborhood representatives to align schedules and project requirements."
+    ],
+    technologies: ["Proposal Writing", "Administrative Management", "Community Outreach", "Stakeholder Communication", "Documentation", "Project Coordination"],
+    attachments: [
+      "/images/experiences/oil/oil.jpg",
+      "/images/experiences/oil/oil1.jpg",
+  
     ],
     order: 3,
   },

@@ -59,6 +59,7 @@ export const projects: Project[] = [
       "/images/projects/blender/blender1.png",
       "/images/projects/blender/blender2.png",
       "/images/projects/blender/blender3.png",
+      "/images/projects/blender/blender4.png"
 
     ],
     tags: ["Blender 3D"],
@@ -172,6 +173,151 @@ export const projects: Project[] = [
 
   },
 
+  {
+    id: "project-005",
+    slug: "portfolio-website",
+    title: "Project HUE & Trust Your Friends | IoT & Web Game",
+    tagline: "Two fun survival games featuring a 2-player IoT bomb defusal puzzle and a 3D action shooter.",
+    description:
+      "A game showcase made for an economic survival challenge. It includes 'Trust Your Friends', a 2-player co-op bomb defusing game built with web and IoT hardware, and 'HUE', a 3D shooter game made with Unity.",
+    status: "completed",
+    featured: true,
+    thumbnail: "/images/projects/game/game1.png",
+    images: [
+      "/images/projects/game/game.png",
+      "/images/projects/game/game1.png",
+      "/images/projects/game/game2.png",
+
+    ],
+    tags: ["Game Development", "IoT", "Web Development"],
+    technologies: [
+      { name: "Unity", color: "#FFFFFF" },
+      { name: "C#", color: "#239120" },
+      { name: "JavaScript", color: "#F7DF1E" },
+      { name: "IoT Hardware", color: "#00979C" },
+      { name: "HTML/CSS", color: "#E34F26" }
+
+    ],
+    links: {
+      github: "",
+      live: "",
+      case_study: "",
+      game: ""
+    },
+    events: [
+      {
+        id: "event-001-1",
+        projectId: "project-001",
+        title: "Project Kickoff",
+        date: "2026-08-01",
+        type: "milestone",
+        description: "Architecture plan finalized and repository initialized.",
+      },
+    ],
+    startDate: "2026-08-01",
+    order: 1,
+
+  },
+
+  {
+    id: "project-006",
+    slug: "portfolio-website",
+    title: "Capture the Flag",
+    tagline: "Solving cybersecurity puzzles and finding hidden flags for the final exam.",
+    description:
+      "A hands-on Capture The Flag (CTF) challenge done as a university final exam. I analyzed network traffic, solved web and crypto puzzles, and found system flaws to capture all the hidden flags.",
+    status: "completed",
+    featured: true,
+    thumbnail: "/images/projects/ctf/ctf.png",
+    images: [
+      "/images/projects/ctf/ctf.png"
+
+    ],
+    tags: ["Cybersecurity", "CTF", "Problem Solving"],
+    technologies: [
+      { name: "Kali Linux", color: "#FCC624" },
+      { name: "AperiSolve", color: "#1679A7" },
+      { name: "Burp Suite", color: "#FF6633" },
+      { name: "Cryptography", color: "#4CAF50" },
+      { name: "Base64", color: "#E34F26" },
+      { name: "Bash / CLI", color: "#E34F26" },
+      { name: "WSL", color: "#E34F26" },
+      { name: "CyberChef", color: "#E34F26" },
+      { name: "OSINT", color: "#E34F26" }
+
+
+    ],
+    links: {
+      github: "",
+      live: "https://www.pdffiller.com/s/NLJAK8SwT",
+      case_study: "",
+      game: ""
+    },
+    events: [
+      {
+        id: "event-001-1",
+        projectId: "project-001",
+        title: "Project Kickoff",
+        date: "2026-08-01",
+        type: "milestone",
+        description: "Architecture plan finalized and repository initialized.",
+      },
+    ],
+    startDate: "2026-08-01",
+    order: 1,
+
+  },
+
+  {
+    id: "project-007",
+    slug: "portfolio-website",
+    title: "Digital Forensics Investigation",
+    tagline: "Combining the characteristics of a criminal operation from digital evidence, hidden items, and network activity.",
+    description:
+      "University final examination project which looks into simulated transnational criminal operation with a digital forensic approach. Restored hidden files, emails, browser history, encrypted email files, and financial records from an image forensic disk and network traffic, matched various artifacts and recreated a timeline for the investigations.",
+    status: "completed",
+    featured: true,
+    thumbnail: "/images/projects/df/df.png",
+    images: [
+      "/images/projects/df/df.png"
+
+    ],
+    tags: [ "Digital Forensics", "Cybersecurity", "Incident Investigation", "Evidence Analysis"],
+    technologies: [
+       { name: "Autopsy", color: "#6C63FF" },
+       { name: "FTK Imager", color: "#4A90E2" },
+       { name: "Wireshark", color: "#1679A7" },
+       { name: "NetworkMiner", color: "#5C6BC0" },
+       { name: "AperiSolve", color: "#1679A7" },
+       { name: "ExifTool", color: "#8B5CF6" },
+       { name: "Steganography", color: "#10B981" },
+       { name: "Cryptography", color: "#F59E0B" },
+       { name: "PCAP Analysis", color: "#EF4444" },
+       { name: "MFT Analysis", color: "#14B8A6" },
+       { name: "Timeline Reconstruction", color: "#EC4899" }
+
+
+    ],
+    links: {
+      github: "",
+      live: "https://www.pdffiller.com/s/ao8vr64X",
+      case_study: "",
+      game: ""
+    },
+    events: [
+      {
+        id: "event-001-1",
+        projectId: "project-001",
+        title: "Project Kickoff",
+        date: "2026-08-01",
+        type: "milestone",
+        description: "Architecture plan finalized and repository initialized.",
+      },
+    ],
+    startDate: "2026-08-01",
+    order: 1,
+
+  },
 
 ];
 
