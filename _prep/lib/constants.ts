@@ -10,6 +10,7 @@ export const RESUME_URL = "/resume.pdf";
 export const SOCIAL_LINKS = {
   github: "https://github.com/danjul-gx",
   linkedin: "https://www.linkedin.com/in/zuldan-fahrizal-rahman-8a405a325/",
+  instagram: "https://www.instagram.com/fxrzall_/",
 } as const;
 
 export const SITE_URL = "https://yourportfolio.com";

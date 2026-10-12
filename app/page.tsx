@@ -1,60 +1,81 @@
 import type { Metadata } from "next";
 
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
-import PageWrapper from "@/components/layout/PageWrapper";
-import HeroSection from "@/components/react-bits/sections/home/HeroSection";
-import LiquidEther from "@/components/LiquidEther";
+import EditorialNavbar from "@/components/editorial/EditorialNavbar";
+import EditorialFooter from "@/components/editorial/EditorialFooter";
+import EditorialHero from "@/components/editorial/EditorialHero";
+import ProjectsStream from "@/components/editorial/projects/ProjectsStream";
+import FieldworkArchive from "@/components/editorial/fieldwork/FieldworkArchive";
+import TechnicalIndex from "@/components/editorial/TechnicalIndex";
+import ContactDispatch from "@/components/editorial/ContactDispatch";
 
 import { siteConfig } from "@/data/site";
 
 export const metadata: Metadata = {
   title: siteConfig.title,
-  description: siteConfig.description,
+  description:
+    "Personal portfolio of Zuldan Fahrizal Rahman, an informatics student at President University building software, games, 3D assets, IoT projects, and digital forensics investigations.",
 };
 
 export default function HomePage() {
   return (
-    <main className="relative min-h-dvh overflow-hidden">
-      
-      {/* Liquid background */}
-      <div className="absolute inset-0 -z-10">
-        <LiquidEther
-          colors={[
-            "#5227FF",
-            "#FF9FFC",
-            "#B497CF",
-          ]}
-          mouseForce={20}
-          cursorSize={100}
-          isViscous={false}
-          viscous={30}
-          iterationsViscous={32}
-          iterationsPoisson={32}
-          resolution={0.5}
-          isBounce={false}
-          autoDemo={true}
-          autoSpeed={0.5}
-          autoIntensity={2.2}
-          takeoverDuration={0.25}
-          autoResumeDelay={3000}
-          autoRampDuration={0.6}
-        />
-      </div>
+    <main className="min-h-dvh bg-paper">
+      <EditorialNavbar />
 
-      <Navbar />
+      <EditorialHero />
 
-      <PageWrapper className="min-h-dvh flex flex-col justify-between overflow-hidden">
-        <main
-          id="main-content"
-          className="flex-1 flex flex-col justify-center"
-        >
-          <HeroSection />
-        </main>
+      {/* Section: Selected Work */}
+      <section
+        id="work"
+        className="w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 border-t border-paper-rule"
+      >
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-10 sm:mb-12">
+            <span className="font-mono text-xs uppercase tracking-wider text-accent-editorial font-semibold">
+              Selected Work · 2024–2025
+            </span>
+            <h2 className="font-display font-bold text-ink text-3xl sm:text-4xl tracking-tight mt-1 mb-2">
+              Projects & Technical Investigations
+            </h2>
+            <p className="text-ink-secondary text-base sm:text-lg max-w-2xl">
+              Real projects built across coursework, independent experiments, and university exhibitions.
+              Explore interactive workbenches, visual models, and investigation timelines below.
+            </p>
+          </div>
 
-        <Footer />
-      </PageWrapper>
+          <ProjectsStream />
+        </div>
+      </section>
 
+      {/* Section: Campus & Fieldwork */}
+      <section
+        id="fieldwork"
+        className="w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 border-t border-paper-rule bg-paper-warm"
+      >
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-10 sm:mb-12">
+            <span className="font-mono text-xs uppercase tracking-wider text-accent-editorial font-semibold">
+              Field Records · 2025
+            </span>
+            <h2 className="font-display font-bold text-ink text-3xl sm:text-4xl tracking-tight mt-1 mb-2">
+              Campus & Fieldwork Archive
+            </h2>
+            <p className="text-ink-secondary text-base sm:text-lg max-w-2xl">
+              Documented organizational work, corporate visits, institutional outreach, and community
+              social initiatives through PUMA Informatics and President University.
+            </p>
+          </div>
+
+          <FieldworkArchive />
+        </div>
+      </section>
+
+      {/* Section: Technical Index */}
+      <TechnicalIndex />
+
+      {/* Section: Contact Dispatch */}
+      <ContactDispatch />
+
+      <EditorialFooter />
     </main>
   );
 }
