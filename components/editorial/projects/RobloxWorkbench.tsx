@@ -26,8 +26,6 @@ export default function RobloxWorkbench({ project }: RobloxWorkbenchProps) {
         <div>
           <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-ink-muted mb-2">
             <span>Project {String(project.order || 1).padStart(2, "0")}</span>
-            <span aria-hidden="true">·</span>
-            <span>Tier 1: Deep Interaction</span>
             {project.tierLabel && (
               <>
                 <span aria-hidden="true">·</span>
@@ -86,11 +84,10 @@ export default function RobloxWorkbench({ project }: RobloxWorkbenchProps) {
                 aria-selected={isSelected}
                 tabIndex={isSelected ? 0 : -1}
                 onClick={() => setActiveStageIndex(idx)}
-                className={`text-left p-3.5 rounded-sm border transition-all duration-150 ${
-                  isSelected
-                    ? "border-ink bg-paper-warm text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
-                    : "border-paper-rule bg-paper text-ink-secondary hover:text-ink hover:border-paper-muted"
-                }`}
+                className={`text-left p-3.5 rounded-sm border transition-all duration-150 ${isSelected
+                  ? "border-ink bg-paper-warm text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+                  : "border-paper-rule bg-paper text-ink-secondary hover:text-ink hover:border-paper-muted"
+                  }`}
               >
                 <div className="flex items-center justify-between font-mono text-xs mb-1">
                   <span
@@ -136,31 +133,31 @@ export default function RobloxWorkbench({ project }: RobloxWorkbenchProps) {
               />
             </div>
             <p className="mt-2 text-xs font-mono text-ink-muted">
-              Stage {stageNumber(activeStage.number)} screenshot · {activeStage.imageAlt}
+              Stage {stageNumber(activeStage.number)} · {activeStage.imageAlt}
             </p>
           </div>
 
-        {/* Detailed Mechanics & Architecture */}
-        <div className="lg:col-span-5 flex flex-col justify-between">
-          <div>
-            <span className="font-mono text-xs uppercase tracking-wider text-accent-editorial font-semibold">
-              Stage Logic & Luau Scripting
-            </span>
-            <h4 className="font-display font-bold text-lg text-ink mt-1">
-              {activeStage.name}
-            </h4>
+          {/* Detailed Mechanics & Architecture */}
+          <div className="lg:col-span-5 flex flex-col justify-between">
+            <div>
+              <span className="font-mono text-xs uppercase tracking-wider text-accent-editorial font-semibold">
+                Stage Logic & Luau Scripting
+              </span>
+              <h4 className="font-display font-bold text-lg text-ink mt-1">
+                {activeStage.name}
+              </h4>
 
-            <ul className="mt-4 space-y-2.5 text-sm text-ink-secondary leading-relaxed">
-              {activeStage.mechanics.map((mech, i) => (
-                <li key={i} className="flex items-start gap-2.5">
-                  <span className="font-mono text-xs text-accent-editorial mt-0.5 select-none">
-                    —
-                  </span>
-                  <span>{mech}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+              <ul className="mt-4 space-y-2.5 text-sm text-ink-secondary leading-relaxed">
+                {activeStage.mechanics.map((mech, i) => (
+                  <li key={i} className="flex items-start gap-2.5">
+                    <span className="font-mono text-xs text-accent-editorial mt-0.5 select-none">
+                      —
+                    </span>
+                    <span>{mech}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             {/* Contextual Tech Stack */}
             <div className="mt-6 pt-5 border-t border-paper-rule">

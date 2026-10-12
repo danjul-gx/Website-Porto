@@ -82,8 +82,6 @@ export default function LightProjectCard(props: LightProjectProps) {
             <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-ink-muted mb-2">
               <span>Project {index}</span>
               <span aria-hidden="true">·</span>
-              <span>Tier 3: Presentation</span>
-              <span aria-hidden="true">·</span>
               <span className="text-accent-editorial">{category}</span>
             </div>
 

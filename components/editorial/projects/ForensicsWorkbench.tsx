@@ -27,8 +27,6 @@ export default function ForensicsWorkbench({ project }: ForensicsWorkbenchProps)
         <div>
           <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-ink-muted mb-2">
             <span>Project {String(project.order || 2).padStart(2, "0")}</span>
-            <span aria-hidden="true">·</span>
-            <span>Tier 1: Deep Interaction</span>
             {project.tierLabel && (
               <>
                 <span aria-hidden="true">·</span>
@@ -88,11 +86,10 @@ export default function ForensicsWorkbench({ project }: ForensicsWorkbenchProps)
                 aria-selected={isSelected}
                 tabIndex={isSelected ? 0 : -1}
                 onClick={() => setActivePhaseIndex(idx)}
-                className={`text-left p-3.5 rounded-sm border transition-all duration-150 ${
-                  isSelected
-                    ? "border-ink bg-paper-warm text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
-                    : "border-paper-rule bg-paper text-ink-secondary hover:text-ink hover:border-paper-muted"
-                }`}
+                className={`text-left p-3.5 rounded-sm border transition-all duration-150 ${isSelected
+                  ? "border-ink bg-paper-warm text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
+                  : "border-paper-rule bg-paper text-ink-secondary hover:text-ink hover:border-paper-muted"
+                  }`}
               >
                 <div className="font-mono text-xs text-accent-editorial font-bold mb-1">
                   {phase.step}

@@ -51,8 +51,6 @@ export default function HueSchematic({ project }: HueSchematicProps) {
           <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-ink-muted mb-2">
             <span>Project {String(project?.order || 5).padStart(2, "0")}</span>
             <span aria-hidden="true">·</span>
-            <span>Tier 2: Dual Exhibition Project</span>
-            <span aria-hidden="true">·</span>
             <span className="text-accent-editorial">{project?.tierLabel || "Exhibition Showcase"}</span>
           </div>
           <h3 className="font-display font-bold text-2xl sm:text-3xl text-ink tracking-tight">
@@ -94,11 +92,10 @@ export default function HueSchematic({ project }: HueSchematicProps) {
             aria-selected={activeTab === "tyf"}
             tabIndex={activeTab === "tyf" ? 0 : -1}
             onClick={() => setActiveTab("tyf")}
-            className={`text-left p-3.5 rounded-sm border transition-all duration-150 flex items-start gap-3 ${
-              activeTab === "tyf"
+            className={`text-left p-3.5 rounded-sm border transition-all duration-150 flex items-start gap-3 ${activeTab === "tyf"
                 ? "border-ink bg-paper-warm text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
                 : "border-paper-rule bg-paper text-ink-secondary hover:text-ink hover:border-paper-muted"
-            }`}
+              }`}
           >
             <Cpu size={18} className="text-accent-editorial shrink-0 mt-0.5" aria-hidden="true" />
             <div>
@@ -120,11 +117,10 @@ export default function HueSchematic({ project }: HueSchematicProps) {
             aria-selected={activeTab === "hue"}
             tabIndex={activeTab === "hue" ? 0 : -1}
             onClick={() => setActiveTab("hue")}
-            className={`text-left p-3.5 rounded-sm border transition-all duration-150 flex items-start gap-3 ${
-              activeTab === "hue"
+            className={`text-left p-3.5 rounded-sm border transition-all duration-150 flex items-start gap-3 ${activeTab === "hue"
                 ? "border-ink bg-paper-warm text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]"
                 : "border-paper-rule bg-paper text-ink-secondary hover:text-ink hover:border-paper-muted"
-            }`}
+              }`}
           >
             <Gamepad2 size={18} className="text-accent-editorial shrink-0 mt-0.5" aria-hidden="true" />
             <div>
@@ -155,116 +151,116 @@ export default function HueSchematic({ project }: HueSchematicProps) {
               transition={{ duration: 0.18, ease: "easeOut" }}
               className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start"
             >
-            {/* Visual Schematic Diagram */}
-            <div className="lg:col-span-7">
-              <div className="p-5 border border-paper-rule bg-paper-warm rounded-sm">
-                <span className="block font-mono text-xs uppercase tracking-wider text-accent-editorial font-semibold mb-3">
-                  Hardware-to-Web Interaction Architecture
-                </span>
-
-                {/* 2-Player Co-op Relationship Schematic */}
-                <div className="space-y-4">
-                  {/* Player 1 Box */}
-                  <div className="p-4 bg-paper border border-paper-rule rounded-sm">
-                    <div className="flex items-center justify-between font-mono text-xs mb-1">
-                      <span className="font-bold text-ink">Player 1: The Defuser</span>
-                      <span className="text-accent-editorial">Physical Hardware Station</span>
-                    </div>
-                    <p className="text-xs text-ink-secondary">
-                      Interacts with the custom physical IoT hardware box fitted with toggle switches,
-                      push buttons, and indicator LEDs. The player cannot see the manual and must follow instructions.
-                    </p>
-                  </div>
-
-                  {/* Relationship Link */}
-                  <div className="flex items-center justify-center gap-3 py-1 text-ink-muted">
-                    <div className="h-px bg-paper-rule flex-1" />
-                    <span className="font-mono text-[11px] uppercase tracking-wider px-2 py-0.5 border border-paper-rule bg-paper rounded-sm">
-                      Verbal Communication & Defusal Inputs
-                    </span>
-                    <div className="h-px bg-paper-rule flex-1" />
-                  </div>
-
-                  {/* Player 2 Box */}
-                  <div className="p-4 bg-paper border border-paper-rule rounded-sm">
-                    <div className="flex items-center justify-between font-mono text-xs mb-1">
-                      <span className="font-bold text-ink">Player 2: The Expert</span>
-                      <span className="text-accent-editorial">Web Application Station</span>
-                    </div>
-                    <p className="text-xs text-ink-secondary">
-                      Operates the browser interface displaying the defusal manuals, rules, logic tables,
-                      and time countdown. The expert cannot see the physical device and must direct Player 1.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-4 pt-3 border-t border-paper-rule flex items-center justify-between text-[11px] font-mono text-ink-muted">
-                  <span>Input: Hardware buttons & toggles</span>
-                  <span className="flex items-center gap-1">
-                    State synchronization
-                    <ArrowRight size={11} aria-hidden="true" />
+              {/* Visual Schematic Diagram */}
+              <div className="lg:col-span-7">
+                <div className="p-5 border border-paper-rule bg-paper-warm rounded-sm">
+                  <span className="block font-mono text-xs uppercase tracking-wider text-accent-editorial font-semibold mb-3">
+                    Hardware-to-Web Interaction Architecture
                   </span>
-                  <span>Display: Web app instructions</span>
+
+                  {/* 2-Player Co-op Relationship Schematic */}
+                  <div className="space-y-4">
+                    {/* Player 1 Box */}
+                    <div className="p-4 bg-paper border border-paper-rule rounded-sm">
+                      <div className="flex items-center justify-between font-mono text-xs mb-1">
+                        <span className="font-bold text-ink">Player 1: The Defuser</span>
+                        <span className="text-accent-editorial">Physical Hardware Station</span>
+                      </div>
+                      <p className="text-xs text-ink-secondary">
+                        Interacts with the custom physical IoT hardware box fitted with toggle switches,
+                        push buttons, and indicator LEDs. The player cannot see the manual and must follow instructions.
+                      </p>
+                    </div>
+
+                    {/* Relationship Link */}
+                    <div className="flex items-center justify-center gap-3 py-1 text-ink-muted">
+                      <div className="h-px bg-paper-rule flex-1" />
+                      <span className="font-mono text-[11px] uppercase tracking-wider px-2 py-0.5 border border-paper-rule bg-paper rounded-sm">
+                        Verbal Communication & Defusal Inputs
+                      </span>
+                      <div className="h-px bg-paper-rule flex-1" />
+                    </div>
+
+                    {/* Player 2 Box */}
+                    <div className="p-4 bg-paper border border-paper-rule rounded-sm">
+                      <div className="flex items-center justify-between font-mono text-xs mb-1">
+                        <span className="font-bold text-ink">Player 2: The Expert</span>
+                        <span className="text-accent-editorial">Web Application Station</span>
+                      </div>
+                      <p className="text-xs text-ink-secondary">
+                        Operates the browser interface displaying the defusal manuals, rules, logic tables,
+                        and time countdown. The expert cannot see the physical device and must direct Player 1.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 pt-3 border-t border-paper-rule flex items-center justify-between text-[11px] font-mono text-ink-muted">
+                    <span>Input: Hardware buttons & toggles</span>
+                    <span className="flex items-center gap-1">
+                      State synchronization
+                      <ArrowRight size={11} aria-hidden="true" />
+                    </span>
+                    <span>Display: Web app instructions</span>
+                  </div>
                 </div>
-              </div>
 
-              <p className="mt-2 text-xs font-mono text-ink-muted">
-                Architectural breakdown: Pure hardware-to-web co-op communication model.
-              </p>
-            </div>
-
-            {/* Game A Description & Facts */}
-            <div className="lg:col-span-5 flex flex-col justify-between">
-              <div>
-                <span className="font-mono text-xs uppercase tracking-wider text-accent-editorial font-semibold">
-                  Game A Details
-                </span>
-                <h4 className="font-display font-bold text-xl text-ink mt-1">
-                  Trust Your Friends? Defuse or Detonate
-                </h4>
-                <p className="mt-3 text-sm text-ink-secondary leading-relaxed">
-                  Inspired by asynchronous cooperative puzzles, Trust Your Friends divides responsibility
-                  between two players in different roles. One player operates the physical IoT box, while
-                  the second player reads the defusal instructions on a web interface.
+                <p className="mt-2 text-xs font-mono text-ink-muted">
+                  Architectural breakdown: Pure hardware-to-web co-op communication model.
                 </p>
+              </div>
 
-                <div className="mt-4">
-                  <span className="block font-mono text-xs uppercase tracking-wider text-ink-muted mb-2">
-                    Verified Components
+              {/* Game A Description & Facts */}
+              <div className="lg:col-span-5 flex flex-col justify-between">
+                <div>
+                  <span className="font-mono text-xs uppercase tracking-wider text-accent-editorial font-semibold">
+                    Game A Details
                   </span>
-                  <ul className="space-y-1.5 text-xs text-ink-secondary">
-                    <li className="flex items-start gap-2">
-                      <span className="font-mono text-accent-editorial">—</span>
-                      <span>Physical IoT hardware device with interactive buttons and toggles</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="font-mono text-accent-editorial">—</span>
-                      <span>Web application delivering manual instructions and game countdown</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="font-mono text-accent-editorial">—</span>
-                      <span>Exhibited live with public participants at Living Plaza Jababeka</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+                  <h4 className="font-display font-bold text-xl text-ink mt-1">
+                    Trust Your Friends? Defuse or Detonate
+                  </h4>
+                  <p className="mt-3 text-sm text-ink-secondary leading-relaxed">
+                    Inspired by asynchronous cooperative puzzles, Trust Your Friends divides responsibility
+                    between two players in different roles. One player operates the physical IoT box, while
+                    the second player reads the defusal instructions on a web interface.
+                  </p>
 
-              <div className="mt-6 pt-4 border-t border-paper-rule">
-                <span className="block font-mono text-xs uppercase tracking-wider text-ink-muted mb-2">
-                  Verified Tech Stack
-                </span>
-                <div className="flex flex-wrap gap-1.5">
-                  {["IoT Hardware", "JavaScript", "HTML/CSS", "Physical Computing"].map((tech) => (
-                    <span
-                      key={tech}
-                      className="font-mono text-xs px-2 py-0.5 bg-paper-warm border border-paper-rule text-ink rounded-sm"
-                    >
-                      {tech}
+                  <div className="mt-4">
+                    <span className="block font-mono text-xs uppercase tracking-wider text-ink-muted mb-2">
+                      Verified Components
                     </span>
-                  ))}
+                    <ul className="space-y-1.5 text-xs text-ink-secondary">
+                      <li className="flex items-start gap-2">
+                        <span className="font-mono text-accent-editorial">—</span>
+                        <span>Physical IoT hardware device with interactive buttons and toggles</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="font-mono text-accent-editorial">—</span>
+                        <span>Web application delivering manual instructions and game countdown</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="font-mono text-accent-editorial">—</span>
+                        <span>Exhibited live with public participants at Living Plaza Jababeka</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="mt-6 pt-4 border-t border-paper-rule">
+                  <span className="block font-mono text-xs uppercase tracking-wider text-ink-muted mb-2">
+                    Verified Tech Stack
+                  </span>
+                  <div className="flex flex-wrap gap-1.5">
+                    {["IoT Hardware", "JavaScript", "HTML/CSS", "Physical Computing"].map((tech) => (
+                      <span
+                        key={tech}
+                        className="font-mono text-xs px-2 py-0.5 bg-paper-warm border border-paper-rule text-ink rounded-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
             </motion.div>
           ) : (
             <motion.div

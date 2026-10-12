@@ -29,8 +29,6 @@ export default function BlenderInspector({ project }: BlenderInspectorProps) {
         <div>
           <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-ink-muted mb-2">
             <span>Project {String(project.order || 3).padStart(2, "0")}</span>
-            <span aria-hidden="true">·</span>
-            <span>Tier 2: Visual Inspection</span>
             {project.tierLabel && (
               <>
                 <span aria-hidden="true">·</span>
@@ -173,11 +171,10 @@ export default function BlenderInspector({ project }: BlenderInspectorProps) {
                   type="button"
                   onClick={() => setSelectedAssetId(asset.id)}
                   aria-pressed={isSelected}
-                  className={`text-left p-2.5 rounded-sm border flex items-center gap-3 transition-all duration-150 focus-visible:outline-2 focus-visible:outline-accent-editorial ${
-                    isSelected
+                  className={`text-left p-2.5 rounded-sm border flex items-center gap-3 transition-all duration-150 focus-visible:outline-2 focus-visible:outline-accent-editorial ${isSelected
                       ? "border-ink bg-paper-warm shadow-xs ring-1 ring-ink/10"
                       : "border-paper-rule bg-paper hover:border-paper-muted"
-                  }`}
+                    }`}
                 >
                   <div className="relative w-16 h-12 shrink-0 overflow-hidden rounded-sm border border-paper-rule bg-paper-muted">
                     <Image
