@@ -5,7 +5,7 @@ export const siteConfig: SiteConfig = {
   title: "Zuldan Fahrizal Rahman",
   description:
     "Personal portfolio of Zuldan — a frontend developer specializing in React, Next.js, and modern web experiences.",
-  location: "Cikarang, Indonesia",
+  location: "Cikarang, Indonesiaa",
   email: "[EMAIL_ADDRESS]",
   social: {
     github: "https://github.com/danjul-gx",

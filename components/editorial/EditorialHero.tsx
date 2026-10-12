@@ -240,7 +240,7 @@ export default function EditorialHero() {
                 <TiltedCard
                   imageSrc="/images/profile/zuldan.png"
                   altText="Zuldan Fahrizal Rahman"
-                  captionText="Cikarang, Indonesia"
+                  captionText="Zuldan Fahrizal Rahman"
                   containerHeight="100%"
                   containerWidth="100%"
                   imageHeight="100%"
